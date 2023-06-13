@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>웹사이트 제목</title>
-  <!-- 기타 메타 태그, 스타일시트, 스크립트 등 -->
+  <title>빈 흰색 화면</title>
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <!-- 헤더 콘텐츠 -->
-  </header>
-
-  <nav>
-    <!-- 내비게이션 콘텐츠 -->
-  </nav>
-
-  <main>
-    <!-- 주요 콘텐츠 -->
-  </main>
-
-  <footer>
-    <!-- 푸터 콘텐츠 -->
-  </footer>
 </body>
 </html>
