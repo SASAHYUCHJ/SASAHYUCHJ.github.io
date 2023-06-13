@@ -12,65 +12,59 @@
       margin: 0;
       padding: 20px;
     }
-.container {
-  text-align: center;
-  position: relative;
-}
-.container input {
-display: block;
-margin-bottom: 10px;
-}
-
-#input1 {
-position: absolute;
-top: calc(25vh);
-left: calc(5.5vw);
-}
-
-#input2 {
-position: absolute;
-top: calc(25vh);
-left: calc(78.5vw);
-}
-
-#result1, #result2 {
-color: white;
-position: absolute;
-top: calc(25vh + 35px);
-width: 100%;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-#result1 {
-left: 5.5vw;
-flex-direction: row;
-}
-
-#result2 {
-left: 78.5vw;
-flex-direction: row;
-}
-#result1 span, #result2 span {
-display: inline-block;
-margin: 0 5px;
-}
-</style>
-
+    .container {
+      text-align: center;
+      position: relative;
+    }
+    .container input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    #input1 {
+      position: absolute;
+      top: calc(25vh);
+      left: calc(5.5vw);
+    }
+    #input2 {
+      position: absolute;
+      top: calc(25vh);
+      left: calc(78.5vw);
+    }
+    #result1,
+    #result2 {
+      color: white;
+      position: absolute;
+      top: calc(25vh + 35px);
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #result1 span,
+    #result2 span {
+      margin-right: 5px;
+    }
+    #result1::before,
+    #result2::before {
+      content: "블루 팀 감독: ";
+    }
+    #result2::before {
+      content: "레드 팀 감독: ";
+    }
+  </style>
   <script>
     function displayText() {
       var input1 = document.getElementById("input1").value;
       var input2 = document.getElementById("input2").value;
-      
+
       var result1 = document.getElementById("result1");
       var result2 = document.getElementById("result2");
-      
-      result1.innerHTML = "<span>블루 팀 감독:</span>" + input1;
-      result2.innerHTML = "<span>레드 팀 감독:</span>" + input2;
+
+      result1.innerHTML = "<span>" + input1 + "</span>";
+      result2.innerHTML = "<span>" + input2 + "</span>";
     }
-    
+
     function handleKeyPress(event) {
       if (event.key === "Enter") {
         event.preventDefault(); // 기본 동작 취소
@@ -84,8 +78,9 @@ margin: 0 5px;
   <div class="container">
     <input type="text" id="input1" placeholder="블루 팀 감독" onkeydown="handleKeyPress(event)">
     <input type="text" id="input2" placeholder="레드 팀 감독" onkeydown="handleKeyPress(event)">
+
     <div id="result1"></div>
-<div id="result2"></div>
-     </div>
+    <div id="result2"></div>
+  </div>
 </body>
 </html>
