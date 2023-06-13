@@ -23,16 +23,16 @@
       margin-bottom: 10px;
     }
 
-    #input1 { /* 추가 */
+    #input1 {
       position: absolute;
       top: calc(25vh - 50%);
-      left: calc(7vw - 50%);
+      left: calc(6vw - 50%);
     }
     
     #input2 {
     position: absolute;
     top: calc(25vh - 50%); 
-    left: calc(78vw - 50%); 
+    left: calc(79vw - 50%); 
     }
   </style>
   <script>
@@ -59,7 +59,6 @@
   <div class="container">
     <input type="text" id="input1" placeholder="블루 팀 감독" onkeypress="handleKeyPress(event)">
     <input type="text" id="input2" placeholder="레드 팀 감독" onkeypress="handleKeyPress(event)">
-    <button onclick="displayText()">확인</button>
   
     <div id="result1"></div>
     <div id="result2"></div>
