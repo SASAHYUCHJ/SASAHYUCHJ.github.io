@@ -37,7 +37,17 @@
 #result1, #result2 {
   color: white;
   position: absolute;
-  top: calc(35vh);
+  top: calc(25vh + 35px);
+  width: 100%;
+  text-align: center;
+}
+
+#result1 {
+  left: 5.5vw;
+}
+
+#result2 {
+  left: 78.5vw;
 }
   </style>
   <script>
@@ -65,8 +75,8 @@ function handleKeyPress(event) {
     <input type="text" id="input1" placeholder="블루 팀 감독" onkeydown="handleKeyPress(event)">
     <input type="text" id="input2" placeholder="레드 팀 감독" onkeydown="handleKeyPress(event)">
   
-    <div id="result1"></div>
-    <div id="result2"></div>
+<div id="result1"></div>
+<div id="result2"></div>
   </div>
 </body>
 </html>
