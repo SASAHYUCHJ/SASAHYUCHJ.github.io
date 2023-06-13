@@ -58,21 +58,6 @@ display: inline-block;
 margin: 0 5px;
 white-space: nowrap;
 }
-
-.input-container {
-position: absolute;
-top: calc(25vh);
-left: 0;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: row;
-}
-
-.input-container input {
-margin: 0 5px;
-}
 </style>
 
   <script>
@@ -98,12 +83,10 @@ margin: 0 5px;
 </head>
 <body>
   <div class="container">
-    <div class="input-container">
-      <input type="text" id="input1" placeholder="블루 팀 감독" onkeydown="handleKeyPress(event)">
-      <input type="text" id="input2" placeholder="레드 팀 감독" onkeydown="handleKeyPress(event)">
-    </div>
+    <input type="text" id="input1" placeholder="블루 팀 감독" onkeydown="handleKeyPress(event)">
+    <input type="text" id="input2" placeholder="레드 팀 감독" onkeydown="handleKeyPress(event)">
     <div id="result1"></div>
-    <div id="result2"></div>
-  </div>
+<div id="result2"></div>
+     </div>
 </body>
 </html>
