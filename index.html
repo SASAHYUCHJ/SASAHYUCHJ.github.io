@@ -12,51 +12,51 @@
       margin: 0;
       padding: 20px;
     }
+.container {
+  text-align: center;
+  position: relative;
+}
 
-    .container {
-      text-align: center;
-      position: relative;
-    }
+.container input {
+  display: block;
+  margin-bottom: 10px;
+}
 
-    .container input {
-      display: block;
-      margin-bottom: 10px;
-    }
+#input1 {
+  position: absolute;
+  top: calc(25vh);
+  left: calc(5.5vw);
+}
 
-    #input1 {
-      position: absolute;
-      top: calc(25vh);
-      left: calc(5.5vw);
-    }
-    
-    #input2 {
-      position: absolute;
-      top: calc(25vh);
-      left: calc(78.5vw);
-    }
-    
-    #result1, #result2 {
-      color: white;
-    }
+#input2 {
+  position: absolute;
+  top: calc(25vh);
+  left: calc(78.5vw);
+}
+
+#result1, #result2 {
+  color: white;
+  position: absolute;
+  top: calc(35vh);
+}
   </style>
   <script>
     function displayText() {
       var input1 = document.getElementById("input1").value;
       var input2 = document.getElementById("input2").value;
-      
-      var result1 = document.getElementById("result1");
-      var result2 = document.getElementById("result2");
-      
-      result1.innerHTML = "블루 팀 감독: " + input1;
-      result2.innerHTML = "레드 팀 감독: " + input2;
-    }
-    
-    function handleKeyPress(event) {
-      if (event.key === "Enter") {
-        event.preventDefault(); // 기본 동작 취소
-        displayText();
-      }
-    }
+       var result1 = document.getElementById("result1");
+  var result2 = document.getElementById("result2");
+  
+  result1.innerHTML = "블루 팀 감독: " + input1;
+  result2.innerHTML = "레드 팀 감독: " + input2;
+}
+
+function handleKeyPress(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // 기본 동작 취소
+    displayText();
+  }
+}
   </script>
   <title>LOL Auction</title>
 </head>
