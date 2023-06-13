@@ -25,14 +25,14 @@
 
     #input1 {
       position: absolute;
-      top: calc(25vh - 50%);
-      left: calc(6vw - 50%);
+      top: calc(25vh);
+      left: calc(6vw);
     }
     
     #input2 {
-    position: absolute;
-    top: calc(25vh - 50%); 
-    left: calc(79vw - 50%); 
+      position: absolute;
+      top: calc(25vh);
+      left: calc(79vw);
     }
   </style>
   <script>
@@ -49,6 +49,7 @@
     
     function handleKeyPress(event) {
       if (event.keyCode === 13) { // Enter 키 코드
+        event.preventDefault(); // 기본 동작 취소
         displayText();
       }
     }
