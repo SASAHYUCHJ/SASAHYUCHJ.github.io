@@ -15,7 +15,7 @@
 
     .container {
       text-align: center;
-      position: relative; /* 추가 */
+      position: relative;
     }
 
     .container input {
@@ -46,13 +46,19 @@
       result1.innerHTML = "입력값 1: " + input1;
       result2.innerHTML = "입력값 2: " + input2;
     }
+    
+    function handleKeyPress(event) {
+      if (event.keyCode === 13) { // Enter 키 코드
+        displayText();
+      }
+    }
   </script>
   <title>LOL Auction</title>
 </head>
 <body>
   <div class="container">
-    <input type="text" id="input1" placeholder="블루 팀 감독">
-    <input type="text" id="input2" placeholder="레드 팀 감독">
+    <input type="text" id="input1" placeholder="블루 팀 감독" onkeypress="handleKeyPress(event)">
+    <input type="text" id="input2" placeholder="레드 팀 감독" onkeypress="handleKeyPress(event)">
     <button onclick="displayText()">확인</button>
   
     <div id="result1"></div>
