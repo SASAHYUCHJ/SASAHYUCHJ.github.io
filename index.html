@@ -3,96 +3,47 @@
 <head>
   <style>
     body {
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+      background-image: url("bg.png");
+      background-size: cover;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
       padding: 20px;
     }
 
-    .player-card {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
+    .container {
+      text-align: center;
     }
 
-    .player-card img {
-      width: 100px;
-      height: 100px;
-      margin-right: 10px;
+    .container input {
+      display: block;
+      margin-bottom: 10px;
     }
   </style>
-  <title>SASA LOL DRAFT</title>
+  <script>
+    function displayText() {
+      var input1 = document.getElementById("input1").value;
+      var input2 = document.getElementById("input2").value;
+      
+      var result1 = document.getElementById("result1");
+      var result2 = document.getElementById("result2");
+      
+      result1.innerHTML = "입력값 1: " + input1;
+      result2.innerHTML = "입력값 2: " + input2;
+    }
+  </script>
+  <title>LOL Auction</title>
 </head>
 <body>
   <div class="container">
-    <h1>SASA LOL DRAFT</h1>
-
-    <h2>Coach Selection</h2>
-    <form>
-      <label for="coach1">Enter coach name 1:</label>
-      <input type="text" id="coach1" name="coach1" required>
-      <br>
-      <label for="coach2">Enter coach name 2:</label>
-      <input type="text" id="coach2" name="coach2" required>
-      <br>
-      <button type="submit">Start Draft</button>
-    </form>
-
-    <h2>Player Auction</h2>
-    <div id="player-auction">
-      <!-- Player auction details will be dynamically added here -->
-    </div>
-
-    <h2>Team A Players</h2>
-    <div id="team-a-players">
-      <!-- Team A player cards will be dynamically added here -->
-    </div>
-
-    <h2>Team B Players</h2>
-    <div id="team-b-players">
-      <!-- Team B player cards will be dynamically added here -->
-    </div>
+    <input type="text" id="input1" placeholder="첫 번째 입력창">
+    <input type="text" id="input2" placeholder="두 번째 입력창">
+    <button onclick="displayText()">확인</button>
+  
+    <div id="result1"></div>
+    <div id="result2"></div>
   </div>
-
-  <script>
-    // Example script to add dynamic functionality to the HTML elements
-    document.querySelector('form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      assignCoaches();
-    });
-
-    function assignCoaches() {
-      var coach1Name = document.getElementById('coach1').value;
-      var coach2Name = document.getElementById('coach2').value;
-
-      document.getElementById('coach1').disabled = true;
-      document.getElementById('coach2').disabled = true;
-      document.querySelector('button[type="submit"]').disabled = true;
-
-      // Perform coach assignment logic and continue with the draft
-      // ...
-
-      startPlayerAuction();
-    }
-
-    function startPlayerAuction() {
-      // Perform player auction logic and update the "player-auction" section with details
-      // ...
-
-      var playerAuctionContainer = document.getElementById('player-auction');
-      var playerAuctionHTML = ''; // Build the HTML content for player auction details dynamically
-      // ...
-
-      playerAuctionContainer.innerHTML = playerAuctionHTML;
-
-      // Continue with the rest of the player auction process
-      // ...
-    }
-
-    // Function to dynamically add player cards to the respective team sections
-    function addPlayerCardToTeam(player, team) {
-      var teamContainer = document.getElementById(team + '-players');
-      var player
+</body>
+</html>
